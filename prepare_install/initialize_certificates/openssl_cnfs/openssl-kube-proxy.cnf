@@ -1,0 +1,14 @@
+[req]
+default_bits = 2048
+default_keyfile = kube-proxy.key
+prompt = no
+encrypt_key = no
+req_extensions = v3_req
+distinguished_name = req_distinguished_name
+
+[req_distinguished_name]
+CN = system:kube-proxy
+
+[ v3_req ]
+basicConstraints = CA:FALSE
+keyUsage = nonRepudiation, digitalSignature, keyEncipherment

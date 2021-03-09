@@ -1,0 +1,15 @@
+[req]
+default_bits = 2048
+default_keyfile = admin.key
+prompt = no
+encrypt_key = no
+req_extensions = v3_req
+distinguished_name = req_distinguished_name
+
+[req_distinguished_name]
+CN = admin
+O = system:masters
+
+[ v3_req ]
+basicConstraints = CA:FALSE
+keyUsage = nonRepudiation, digitalSignature, keyEncipherment
